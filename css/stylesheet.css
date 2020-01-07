@@ -1,0 +1,284 @@
+@font-face {
+    font-family: '8bit_wondernominal';
+    src: url('8-bit_wonder-webfont.woff2') format('woff2'),
+         url('8-bit_wonder-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body {
+	background: #3E5151;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #118d9c, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #118d9c, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	font-family: '8bit_wondernominal';
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	font-size: 10px;
+}
+#game {
+	position: relative;
+	width: 700px;
+	height: 500px;
+	left: calc(50% - (700px / 2));
+	top: calc(47% - (500px / 2));
+}
+#screen {
+	border: 5px solid #eee;
+	background-image:url("../img/menu.jpg");
+}
+
+#start {
+	display: block;
+	position: absolute;
+	width: 128px;
+	height: 55px;
+	cursor: pointer;
+	top: 50%;
+	right:40%;
+	background-image:url('../img/button.jpg');
+}
+#restart{
+	display: none;
+	position: absolute;
+	width: 128px;
+	height: 55px;
+	cursor: pointer;
+	top: 70%;
+	right:20%;
+	background-image:url('../img/restart.jpg');
+}
+#scorePost {
+	display: none;
+	position: absolute;
+	width: 128px;
+	height: 55px;
+	cursor: pointer;
+	top: 70%;
+	right:60%;
+	background-image:url('../img/submit.jpg');
+	border: none;
+}
+#pause {
+	display: flex;
+	width: auto;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	text-align: center;
+	font-size: 72px;
+	top:45%;
+    left: 50%;
+    margin-right: -50%;
+	transform: translate(-50%, -50%);
+	font-family: '8bit_wondernominal';
+	color: white;
+	opacity: 0.9;
+	text-shadow: 4px 2px 14px rgba(0,0,0,1);
+}
+
+#form{
+	width: 220px;
+	height: auto;
+	position: absolute;
+	right: calc(10% - (200px / 2));
+	top: calc(40% - (200px / 2));
+	text-align: center;
+	border: 2px solid #eee;
+	border-radius: 5px;
+	text-shadow: 4px 2px 10px rgba(0,0,0,1);
+	color: white;
+}
+#form div {
+	padding: 10px;
+}
+#loginForm {
+	border-top: 2px solid #eee;
+	border-radius: 5px;
+	padding: 10px;
+}
+#remove{
+	border-top:0;
+}
+input {
+	margin:5px;
+}
+input[type=text]:focus {
+  border: 3px solid #555;
+  padding:3px;
+}
+#button {
+  background-color: transparent; 
+  border: 2px solid #eee;
+  color: white;
+  padding: 5px 10px;
+  font-family: '8bit_wondernominal';
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.errorMsg{
+	text-shadow: 4px 2px 4px rgba(0,150,0,1);
+	color: white;
+}
+
+#login{
+	position: absolute;	
+	float: left;
+	top:1%;
+	left:0;
+	text-shadow: 4px 2px 4px rgba(0,0,0,1);
+	color: white;
+	font-size: 15px;
+	margin-left: 1%;
+}
+#logout{
+	float: right;
+	position: absolute;	
+	top:1%;
+	right:0;
+	font-size: 15px;
+	text-shadow: 4px 2px 4px rgba(0,0,0,1);
+	color: white;
+	text-decoration: none;
+	margin-right: 1%;
+}
+#tableRank{
+	position: absolute;
+	top: 20%;
+	left: 1.7%;
+	height: 300px;
+	width: 275px;
+	overflow: auto;
+}
+#rank{
+	width: 275px;
+	text-align: center;
+	color: white;
+	font-family: roboto;
+	font-weight: 300;
+	font-size: 15px;
+}
+#rank th{
+	font-family: '8bit_wondernominal';
+	font-size: 12px;
+	text-shadow: 4px 2px 4px rgba(0,0,0,1);
+	background: #eee;
+}
+#rank, td, th {  
+  border: 2px solid #eee;
+  border-radius:5px;
+}
+#rank td {
+	text-align: left;
+}
+
+#rank {
+  border-collapse: collapse;
+}
+
+h2{
+	font-weight: 400;
+	text-align: center;}
+
+th, td {
+  padding: 15px;
+  font-weight: 400;
+}
+th{background: #eee;text-shadow: 4px 2px 4px rgba(0,0,0,1);}
+td {
+	font-family: roboto;
+	font-size: 15px;
+}
+/* ----------------------------------------- ADM CONTENT CSS ------------------------------ */
+#admDiv{
+	width: 98%;
+	position: relative;
+	height: 90%;
+	overflow: auto;
+}
+#admTabble{
+	margin-top: 50px;
+	width: 80%;
+	position: absolute;
+	left: calc(50% - (80% / 2));
+}
+/* ------------------------------------------ HELP CONTENT CSS ----------------------------- */
+#help {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9);
+}
+#helpIco{
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+	font-size: 20px;
+	font-family: 'roboto';
+	font-weight: bold;
+	width: 25px;
+	height: 25px;
+	padding: 5px;
+	border: 3px solid #FFF;
+	border-radius: 25px;
+	text-align: center;
+}
+#close{
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	font-size: 50px;
+	font-family: 'roboto';
+}
+.title{
+	text-shadow: 4px 2px 4px rgba(0,0,0,1);
+	font-size: 30px;
+	position: relative;
+	left: 5%;
+}
+.controls{
+	font-size: 1em;
+	position: relative;
+	left: 7%;
+}
+.text{
+	font-size: 1em;
+	position: relative;
+	left: 7%;
+}
+#version{
+	font-size: 1em;
+	position: absolute;
+	left: 1%;
+	bottom:12.5%;
+}
+#credits{
+	font-size: 1em;
+	position: absolute;
+	right: 1%;
+	bottom:12.5%;
+}
+#git{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 40%;
+	right: 1%
+}
