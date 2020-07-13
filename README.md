@@ -2,6 +2,8 @@
 
 Gravitational is a single-player game protagonized by an astronaut lost on an undiscovered planet.
 
+<img src=https://user-images.githubusercontent.com/50156875/87315626-005aaf80-c4fb-11ea-8d17-37bb75aa5d65.PNG width=450 heigth=450/>
+
 
 ## How to play
 
